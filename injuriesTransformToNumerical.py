@@ -23,7 +23,7 @@ def transformTypesIntoNumerical(df_injuries):
     return df_injuries
 
 def main():
-    df_injuries = pandas.read_csv("injuries.csv")
+    df_injuries = pandas.read_csv("processed_injuries.csv")
     df_injuries = transformTypesIntoNumerical(df_injuries)
     
     df_injuries = df_injuries.drop(columns = ["Incident Date"])
