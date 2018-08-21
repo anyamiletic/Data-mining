@@ -31,5 +31,8 @@ def main():
     print(df.describe())
     print(df.head())
 
+    #export new csv file
+    df.to_csv("processed_deaths.csv")
+
 if __name__ == "__main__":
     main()
