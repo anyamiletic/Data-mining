@@ -1,0 +1,500 @@
+,Incident Date,State,City Or County,# Killed,# Injured
+0,"August 17, 2018",Louisiana,West Monroe,1.0,0
+1,"August 16, 2018",Virginia,Richmond,1.0,0
+2,"August 15, 2018",Kentucky,Louisville,1.0,0
+3,"August 15, 2018",Ohio,Columbus,1.0,0
+4,"August 14, 2018",Michigan,Pontiac,1.0,0
+5,"August 14, 2018",Washington,Seattle (Burien),1.0,0
+6,"August 11, 2018",Kentucky,Corbin,1.0,0
+7,"August 10, 2018",Michigan,Detroit,1.0,0
+8,"August 9, 2018",Ohio,Barberton,1.0,0
+9,"August 8, 2018",Tennessee,La Follette (LaFollette),1.0,0
+10,"August 5, 2018",Texas,Weatherford,1.0,0
+11,"August 4, 2018",Tennessee,Big Rock,1.0,0
+12,"August 3, 2018",Alabama,Winston (county),1.0,0
+13,"August 3, 2018",Delaware,Wilmington,1.0,0
+14,"July 28, 2018",Georgia,Savannah,1.0,0
+15,"July 28, 2018",Missouri,Florissant (Black Jack),1.0,0
+16,"July 27, 2018",North Carolina,Marion,1.0,0
+17,"July 27, 2018",Arkansas,Benton (Haskell),1.0,0
+18,"July 27, 2018",Alaska,Anchorage,1.0,0
+19,"July 26, 2018",Arkansas,Cotton Plant (Maberry),1.0,0
+20,"July 24, 2018",Maine,Oakland,1.0,0
+21,"July 24, 2018",Texas,Conroe,1.0,0
+22,"July 20, 2018",California,San Bernardino (Muscoy),1.0,0
+23,"July 20, 2018",Oregon,Rocky Point,1.0,0
+24,"July 15, 2018",Ohio,Cleveland,1.0,0
+25,"July 15, 2018",Oklahoma,Bethany,1.0,0
+26,"July 14, 2018",Michigan,Muskegon (Muskegon Heights),1.0,0
+27,"July 13, 2018",Indiana,Salem,1.0,0
+28,"July 12, 2018",Georgia,Warner Robins,1.0,0
+29,"July 10, 2018",Oklahoma,Oklahoma City,1.0,0
+30,"July 9, 2018",Michigan,Pontiac,1.0,0
+31,"July 8, 2018",Texas,Houston,1.0,0
+32,"July 8, 2018",Georgia,Columbus,1.0,0
+33,"July 7, 2018",Missouri,Columbia,1.0,0
+34,"July 7, 2018",Georgia,Augusta,1.0,0
+35,"July 7, 2018",California,Fresno,1.0,0
+36,"July 5, 2018",Washington,Kent (Covington),1.0,0
+37,"July 5, 2018",Louisiana,Chalmette,1.0,0
+38,"July 5, 2018",Virginia,Alexandria,1.0,0
+39,"July 4, 2018",Tennessee,Woodbury,1.0,0
+40,"July 4, 2018",Colorado,Fort Collins,1.0,0
+41,"July 3, 2018",Georgia,Roswell,1.0,1
+42,"July 2, 2018",Tennessee,Chattanooga,1.0,0
+43,"July 2, 2018",Missouri,Hartville,1.0,0
+44,"June 30, 2018",Kansas,Wichita,1.0,0
+45,"June 30, 2018",Mississippi,Carthage,1.0,0
+46,"June 29, 2018",Texas,Beaumont,1.0,0
+47,"June 27, 2018",Georgia,Lagrange,1.0,0
+48,"June 27, 2018",Georgia,Savannah,1.0,0
+49,"June 26, 2018",Missouri,Monett,1.0,0
+50,"June 26, 2018",Massachusetts,Dighton,1.0,0
+51,"June 23, 2018",New York,Bronx,1.0,0
+52,"June 23, 2018",Louisiana,Oakdale,1.0,0
+53,"June 23, 2018",North Carolina,Haw River,1.0,0
+54,"June 20, 2018",Alabama,Lafayette,1.0,0
+55,"June 13, 2018",Wisconsin,Madison,1.0,0
+56,"June 13, 2018",South Dakota,Keystone,1.0,0
+57,"June 13, 2018",Arkansas,Flippin,1.0,0
+58,"June 12, 2018",Tennessee,Memphis,1.0,0
+59,"June 12, 2018",Missouri,Saint Joseph,1.0,0
+60,"June 11, 2018",North Carolina,Taylorsville,1.0,0
+61,"June 8, 2018",Texas,Big Spring,1.0,0
+62,"June 7, 2018",Mississippi,Greenville,1.0,0
+63,"June 7, 2018",Texas,Beaumont,1.0,0
+64,"June 7, 2018",Oregon,Silver Lake,1.0,0
+65,"June 6, 2018",Georgia,Riverdale,1.0,0
+66,"June 5, 2018",Kentucky,Elizabethtown,1.0,0
+67,"June 5, 2018",Arizona,Glendale,1.0,0
+68,"June 4, 2018",Ohio,Dayton,1.0,0
+69,"June 4, 2018",Indiana,Lebanon,1.0,0
+70,"June 3, 2018",Washington,Bellevue,1.0,0
+71,"June 1, 2018",Washington,Seattle (Seatac),1.0,0
+72,"May 31, 2018",Washington,Federal Way,1.0,0
+73,"May 30, 2018",Nevada,Las Vegas,1.0,0
+74,"May 29, 2018",Arizona,Tucson,1.0,0
+75,"May 28, 2018",Iowa,Des Moines,1.0,0
+76,"May 27, 2018",Florida,Fort Lauderdale (Dania Beach),1.0,0
+77,"May 27, 2018",Washington,Cle Elum,1.0,0
+78,"May 27, 2018",Pennsylvania,New Bloomfield,1.0,0
+79,"May 26, 2018",Utah,Salt Lake City (West Valley City),1.0,0
+80,"May 26, 2018",Louisiana,Lake Charles (Moss Bluff),1.0,0
+81,"May 26, 2018",Illinois,Chicago,1.0,0
+82,"May 25, 2018",Louisiana,Baton Rouge,1.0,0
+83,"May 25, 2018",Pennsylvania,Erie,1.0,0
+84,"May 22, 2018",Virginia,Roanoke,1.0,0
+85,"May 22, 2018",Virginia,Louisa,1.0,0
+86,"May 22, 2018",Nebraska,Burwell,1.0,0
+87,"May 22, 2018",Nebraska,Taylor,1.0,0
+88,"May 19, 2018",Pennsylvania,Lock Haven,1.0,0
+89,"May 19, 2018",Alabama,Dothan,1.0,0
+90,"May 18, 2018",Oklahoma,Tulsa,1.0,0
+91,"May 16, 2018",Florida,Ocala,1.0,0
+92,"May 16, 2018",Minnesota,Minneapolis (Plymouth),1.0,0
+93,"May 14, 2018",Mississippi,Meridian,1.0,0
+94,"May 13, 2018",New Hampshire,Keene,1.0,0
+95,"May 13, 2018",California,Santa Cruz,1.0,0
+96,"May 13, 2018",Tennessee,Memphis,1.0,0
+97,"May 13, 2018",Arizona,Mesa,1.0,0
+98,"May 12, 2018",Illinois,Rockford,1.0,0
+99,"May 12, 2018",Texas,Rockwall,1.0,0
+100,"May 12, 2018",Kansas,Wichita,1.0,0
+101,"May 10, 2018",Iowa,Clarksville,1.0,0
+102,"May 9, 2018",Texas,Houston,1.0,1
+103,"May 9, 2018",West Virginia,Huntington,1.0,0
+104,"May 9, 2018",Idaho,Shoshone,1.0,0
+105,"May 8, 2018",California,Pacoima (Arleta),1.0,0
+106,"May 7, 2018",Michigan,Six Lakes,1.0,0
+107,"May 7, 2018",Virginia,Richmond,1.0,0
+108,"May 6, 2018",Georgia,Albany,1.0,0
+109,"May 4, 2018",South Carolina,Walterboro,1.0,0
+110,"May 1, 2018",Texas,Corpus Christi,1.0,1
+111,"April 30, 2018",Texas,Christine,1.0,1
+112,"April 28, 2018",Washington,Pe Ell,1.0,0
+113,"April 24, 2018",Texas,Madisonville,1.0,0
+114,"April 21, 2018",Colorado,Olathe,1.0,0
+115,"April 21, 2018",Florida,Deltona,1.0,0
+116,"April 20, 2018",Ohio,Wickliffe,1.0,0
+117,"April 20, 2018",Indiana,Bedford,1.0,0
+118,"April 18, 2018",Tennessee,Englewood,1.0,0
+119,"April 16, 2018",Virginia,Roanoke,1.0,0
+120,"April 16, 2018",Iowa,Waukon,1.0,0
+121,"April 15, 2018",Indiana,Fort Wayne,1.0,1
+122,"April 15, 2018",Pennsylvania,Lancaster,1.0,0
+123,"April 14, 2018",Michigan,Charlevoix,1.0,0
+124,"April 8, 2018",Michigan,Detroit,1.0,0
+125,"April 5, 2018",Maryland,Rawlings,1.0,0
+126,"April 5, 2018",Michigan,Benton Harbor,1.0,0
+127,"April 2, 2018",Michigan,Detroit,1.0,0
+128,"March 31, 2018",Pennsylvania,Reading,1.0,0
+129,"March 31, 2018",Texas,Bandera,1.0,0
+130,"March 31, 2018",Pennsylvania,Temple,1.0,0
+131,"March 31, 2018",Missouri,Saint Louis,1.0,0
+132,"March 28, 2018",Indiana,Terre Haute,1.0,0
+133,"March 25, 2018",Alaska,Barrow (Utqiagvik),1.0,0
+134,"March 25, 2018",Georgia,Brunswick,1.0,0
+135,"March 25, 2018",Michigan,Memphis,1.0,0
+136,"March 24, 2018",Texas,Houston,1.0,0
+137,"March 21, 2018",South Carolina,Seneca,1.0,0
+138,"March 21, 2018",Texas,Martinsville,1.0,0
+139,"March 20, 2018",Texas,El Paso,1.0,0
+140,"March 15, 2018",Alabama,Warrior,1.0,1
+141,"March 15, 2018",California,Newhall,1.0,0
+142,"March 13, 2018",Florida,Miami,1.0,0
+143,"March 12, 2018",Louisiana,Lake Providence,1.0,0
+144,"March 12, 2018",Alabama,Mobile,1.0,0
+145,"March 12, 2018",Alabama,Huntsville,1.0,1
+146,"March 12, 2018",Tennessee,Clarksville,1.0,0
+147,"March 12, 2018",Florida,Miami Beach,1.0,0
+148,"March 11, 2018",Washington,Tacoma,1.0,0
+149,"March 10, 2018",South Carolina,Easley,1.0,0
+150,"March 10, 2018",Wisconsin,Milwaukee,1.0,0
+151,"March 9, 2018",Maryland,Edgewood,1.0,0
+152,"March 7, 2018",Alabama,Birmingham,1.0,2
+153,"March 4, 2018",California,Oroville,1.0,0
+154,"March 4, 2018",Virginia,Unionville,1.0,0
+155,"March 4, 2018",Georgia,Atlanta,1.0,0
+156,"March 4, 2018",Michigan,Detroit,1.0,0
+157,"March 4, 2018",Oklahoma,Tulsa,1.0,0
+158,"March 4, 2018",Texas,Houston,1.0,0
+159,"March 2, 2018",Florida,Pompano Beach,1.0,0
+160,"March 2, 2018",Colorado,Arboles,1.0,0
+161,"February 25, 2018",Louisiana,Baker,1.0,0
+162,"February 25, 2018",Arkansas,El Dorado,1.0,0
+163,"February 23, 2018",Louisiana,Monroe,1.0,0
+164,"February 22, 2018",Colorado,Westminster,1.0,0
+165,"February 22, 2018",Ohio,Sandusky,1.0,0
+166,"February 21, 2018",Florida,Bradenton,1.0,0
+167,"February 20, 2018",New Hampshire,Danville,1.0,0
+168,"February 20, 2018",Texas,El Paso,1.0,0
+169,"February 20, 2018",Alabama,Moulton,1.0,0
+170,"February 20, 2018",North Carolina,Taylorsville,1.0,0
+171,"February 18, 2018",South Carolina,Sumter,1.0,0
+172,"February 18, 2018",Arizona,Sierra Vista,1.0,0
+173,"February 17, 2018",Florida,Orlando,1.0,0
+174,"February 16, 2018",Ohio,Ashtabula,1.0,0
+175,"February 14, 2018",Louisiana,Westlake,1.0,0
+176,"February 12, 2018",Illinois,Belleville,1.0,0
+177,"February 8, 2018",Florida,Myakka City,1.0,0
+178,"February 8, 2018",Texas,Lubbock,1.0,0
+179,"February 8, 2018",Alabama,Talladega,1.0,0
+180,"February 7, 2018",Tennessee,Nashville,1.0,0
+181,"February 7, 2018",New York,Syracuse,1.0,0
+182,"February 3, 2018",Mississippi,Gulfport,1.0,0
+183,"February 3, 2018",California,Santa Maria,1.0,0
+184,"February 3, 2018",Louisiana,Baton Rouge,1.0,0
+185,"January 31, 2018",Oregon,Warrenton,1.0,0
+186,"January 28, 2018",Texas,Houston,1.0,0
+187,"January 28, 2018",California,Norwalk,1.0,0
+188,"January 27, 2018",Texas,Texas City,1.0,0
+189,"January 26, 2018",Florida,Marianna,1.0,0
+190,"January 25, 2018",Texas,Houston,1.0,0
+191,"January 25, 2018",Alabama,Athens,1.0,0
+192,"January 24, 2018",Texas,Fort Worth,1.0,0
+193,"January 23, 2018",Alabama,Atmore,1.0,0
+194,"January 21, 2018",Indiana,Campbellsburg,1.0,0
+195,"January 20, 2018",California,Compton,1.0,0
+196,"January 20, 2018",Indiana,Holton,1.0,0
+197,"January 19, 2018",Michigan,Merrill,2.0,0
+198,"January 19, 2018",Minnesota,Stillwater,1.0,0
+199,"January 15, 2018",Tennessee,Antioch,1.0,0
+200,"January 14, 2018",Nebraska,Genoa,1.0,0
+201,"January 13, 2018",Wisconsin,New Holstein,1.0,0
+202,"January 12, 2018",South Dakota,Watertown,1.0,0
+203,"January 12, 2018",North Carolina,Leland (Belville),1.0,0
+204,"January 12, 2018",Mississippi,Jackson,1.0,0
+205,"January 11, 2018",South Carolina,Rock Hill,1.0,0
+206,"January 3, 2018",Mississippi,Oxford,1.0,0
+207,"January 2, 2018",Ohio,Akron,1.0,0
+208,"January 2, 2018",California,Thousand Palms,1.0,0
+209,"January 2, 2018",Mississippi,Bay Saint Louis,1.0,0
+210,"January 1, 2018",Tennessee,Knoxville,1.0,0
+211,"January 1, 2018",Ohio,Youngstown,1.0,0
+212,"January 1, 2018",Alabama,Bessemer (Concord),1.0,0
+213,"January 1, 2018",Oregon,Sherwood,1.0,0
+214,"December 31, 2017",Mississippi,Cleveland,1.0,0
+215,"December 31, 2017",Missouri,Florissant,1.0,0
+216,"December 31, 2017",Ohio,Groveport,1.0,0
+217,"December 30, 2017",Washington,Auburn,1.0,0
+218,"December 30, 2017",Texas,Hillsboro,1.0,0
+219,"December 28, 2017",Alabama,Brierfield,1.0,0
+220,"December 27, 2017",Kansas,Lawrence,1.0,0
+221,"December 26, 2017",Illinois,Wilmington,1.0,0
+222,"December 25, 2017",California,Ontario,1.0,0
+223,"December 24, 2017",Alabama,Cullman,1.0,0
+224,"December 22, 2017",New York,Guilford,1.0,0
+225,"December 22, 2017",Maryland,Aquasco,1.0,0
+226,"December 21, 2017",South Carolina,Inman,1.0,0
+227,"December 20, 2017",Alabama,Montgomery,1.0,0
+228,"December 20, 2017",Minnesota,Saint Paul,1.0,0
+229,"December 19, 2017",Arizona,Glendale,1.0,0
+230,"December 17, 2017",Texas,Deer Park,1.0,0
+231,"December 16, 2017",Florida,Fort Lauderdale (Sunrise),1.0,0
+232,"December 15, 2017",Alabama,Odenville,1.0,0
+233,"December 13, 2017",Ohio,Newcomerstown,1.0,0
+234,"December 12, 2017",Texas,Cypress,1.0,0
+235,"December 11, 2017",Missouri,Hazelwood,1.0,0
+236,"December 10, 2017",Ohio,Dayton,1.0,0
+237,"December 10, 2017",Utah,Roosevelt (Ballard),1.0,0
+238,"December 9, 2017",Alabama,Anniston,1.0,0
+239,"December 6, 2017",Texas,Plantersville (Todd Mission),1.0,0
+240,"December 6, 2017",Michigan,Detroit,1.0,0
+241,"December 5, 2017",Tennessee,Lawrenceburg,1.0,0
+242,"December 5, 2017",Alaska,Anchorage,1.0,0
+243,"December 4, 2017",New Mexico,Albuquerque,1.0,0
+244,"December 2, 2017",Texas,Houston,1.0,0
+245,"December 1, 2017",Pennsylvania,Pittsburgh (Bloomfield),1.0,0
+246,"November 30, 2017",Arizona,Phoenix,1.0,0
+247,"November 27, 2017",Ohio,Conneaut,1.0,0
+248,"November 26, 2017",Nevada,West Wendover,1.0,0
+249,"November 25, 2017",Tennessee,Memphis (Hickory Hill),1.0,0
+250,"November 25, 2017",Georgia,Jefferson,1.0,0
+251,"November 24, 2017",Missouri,Columbia,1.0,0
+252,"November 24, 2017",Texas,Bulverde,1.0,0
+253,"November 24, 2017",Illinois,Delavan,1.0,0
+254,"November 22, 2017",New York,Sherman,1.0,0
+255,"November 21, 2017",Louisiana,Moreauville,1.0,0
+256,"November 20, 2017",West Virginia,New Martinsville,1.0,0
+257,"November 19, 2017",Indiana,Elizabeth,1.0,0
+258,"November 19, 2017",Ohio,Republic,1.0,0
+259,"November 18, 2017",Ohio,West Chester,1.0,0
+260,"November 18, 2017",Texas,Concepcion,1.0,0
+261,"November 17, 2017",Oregon,Roseburg,1.0,0
+262,"November 16, 2017",Colorado,Saguache,1.0,0
+263,"November 13, 2017",North Carolina,Lillington,1.0,0
+264,"November 13, 2017",Alabama,Adger,1.0,0
+265,"November 12, 2017",Tennessee,Dresden,1.0,0
+266,"November 11, 2017",Minnesota,Aurora,1.0,0
+267,"November 10, 2017",Tennessee,Memphis,1.0,0
+268,"November 9, 2017",Tennessee,Nashville,1.0,0
+269,"November 9, 2017",Pennsylvania,Philadelphia,1.0,0
+270,"November 8, 2017",Texas,Kountze,1.0,0
+272,"November 5, 2017",Louisiana,Pitkin,1.0,0
+273,"November 4, 2017",New Hampshire,Exeter (Brentwood),1.0,0
+274,"November 2, 2017",Connecticut,Wethersfield,1.0,0
+275,"November 2, 2017",Virginia,Williamsburg,1.0,0
+276,"November 2, 2017",Louisiana,Arnaudville,1.0,0
+277,"November 2, 2017",Louisiana,Plaquemine,1.0,0
+278,"October 31, 2017",Mississippi,Columbus,1.0,0
+279,"October 31, 2017",Georgia,Atlanta,1.0,0
+280,"October 30, 2017",Maryland,Glenn Dale,1.0,0
+281,"October 29, 2017",Oklahoma,Lawton,1.0,0
+282,"October 29, 2017",Illinois,Chicago,1.0,0
+283,"October 29, 2017",Indiana,Indianapolis,1.0,0
+284,"October 29, 2017",New York,New York (Manhattan),1.0,1
+285,"October 29, 2017",New York,Syracuse,1.0,0
+286,"October 28, 2017",Texas,Fort Worth,1.0,0
+287,"October 28, 2017",Maine,Hebron,1.0,0
+288,"October 26, 2017",Georgia,Forest Park,1.0,0
+289,"October 26, 2017",Arkansas,Altheimer,1.0,0
+290,"October 23, 2017",Alabama,Cullman,1.0,0
+291,"October 23, 2017",New York,Greig,1.0,0
+292,"October 21, 2017",Pennsylvania,Bangor,1.0,0
+293,"October 21, 2017",Oklahoma,Tulsa,1.0,0
+294,"October 20, 2017",Oregon,Sherwood,1.0,0
+295,"October 20, 2017",Kentucky,Georgetown,1.0,0
+296,"October 20, 2017",New York,Rochester,1.0,0
+297,"October 19, 2017",Kentucky,Nicholasville,1.0,0
+298,"October 19, 2017",Kentucky,Covington,1.0,0
+299,"October 18, 2017",Indiana,Muncie,1.0,0
+300,"October 17, 2017",South Carolina,Warrenville,1.0,0
+301,"October 14, 2017",Illinois,Decatur,1.0,0
+302,"October 14, 2017",Washington,Kelso,1.0,0
+303,"October 11, 2017",Oklahoma,Oklahoma City,1.0,0
+304,"October 11, 2017",Kentucky,Somerset,1.0,0
+305,"October 9, 2017",Tennessee,Clarksville,1.0,0
+306,"October 9, 2017",South Carolina,West Columbia,1.0,0
+307,"October 9, 2017",Michigan,Detroit,1.0,0
+308,"October 8, 2017",North Carolina,Elizabeth City,1.0,0
+309,"October 7, 2017",Missouri,Saint Louis (University City),1.0,0
+310,"October 7, 2017",Kentucky,Hopkinsville,1.0,0
+311,"October 7, 2017",Tennessee,Nashville,1.0,0
+312,"October 7, 2017",Utah,Santaquin,1.0,0
+313,"October 6, 2017",Arkansas,Helena,1.0,0
+314,"October 6, 2017",Oklahoma,Wynnewood,1.0,0
+315,"October 5, 2017",Nebraska,Omaha,1.0,0
+316,"October 3, 2017",Texas,Dallas,1.0,0
+317,"October 3, 2017",Florida,Orlando,1.0,0
+318,"October 3, 2017",Pennsylvania,Berwick,1.0,0
+319,"October 2, 2017",Mississippi,Falkner,1.0,0
+320,"October 1, 2017",Georgia,Augusta,1.0,0
+321,"October 1, 2017",Indiana,Indianapolis,1.0,0
+322,"October 1, 2017",South Carolina,Bowman,1.0,0
+323,"September 30, 2017",Florida,Port Charlotte,1.0,0
+324,"September 30, 2017",Mississippi,Horn Lake,1.0,1
+325,"September 30, 2017",Texas,Cleveland (Plum Grove),1.0,0
+326,"September 30, 2017",Georgia,Augusta,1.0,0
+327,"September 28, 2017",Texas,Tornillo,1.0,0
+328,"September 28, 2017",Ohio,Cleveland (Parma),1.0,0
+329,"September 26, 2017",Texas,Garland,1.0,0
+330,"September 24, 2017",New York,Yonkers,1.0,0
+331,"September 23, 2017",Missouri,Saint Louis,1.0,0
+332,"September 23, 2017",Missouri,Salem,1.0,0
+333,"September 22, 2017",Kansas,Lawrence,1.0,0
+334,"September 22, 2017",Kentucky,Franklin,1.0,0
+335,"September 21, 2017",Colorado,Grand Junction,1.0,0
+336,"September 19, 2017",Texas,Manvel,1.0,0
+337,"September 17, 2017",Ohio,Fremont,1.0,0
+338,"September 16, 2017",Montana,Pablo,1.0,0
+339,"September 15, 2017",South Carolina,Hartsville,1.0,0
+340,"September 14, 2017",Florida,Jacksonville,1.0,0
+341,"September 14, 2017",Missouri,Pineville,1.0,0
+342,"September 14, 2017",Florida,Tampa,1.0,0
+343,"September 13, 2017",South Carolina,Starr,1.0,0
+344,"September 13, 2017",Oklahoma,Tulsa,1.0,0
+345,"September 12, 2017",California,Oakland,1.0,0
+346,"September 11, 2017",Tennessee,Clarksville,1.0,0
+347,"September 10, 2017",Ohio,Madison,1.0,0
+348,"September 9, 2017",Mississippi,De Kalb,1.0,0
+349,"September 8, 2017",Alaska,Manokotak,1.0,0
+350,"September 6, 2017",South Carolina,Columbia,2.0,0
+351,"September 3, 2017",Mississippi,Horn Lake,1.0,0
+352,"September 2, 2017",Indiana,Hammond,2.0,0
+353,"September 2, 2017",Texas,Haltom City,1.0,0
+354,"September 2, 2017",Tennessee,Springfield,1.0,0
+355,"August 31, 2017",Nevada,Las Vegas,1.0,0
+356,"August 30, 2017",Mississippi,Cleveland,1.0,0
+357,"August 28, 2017",Maine,Scarborough,1.0,0
+358,"August 28, 2017",Florida,Pinellas Park,1.0,0
+359,"August 28, 2017",Texas,Scurry,1.0,0
+360,"August 27, 2017",Georgia,Marietta,1.0,0
+361,"August 24, 2017",Pennsylvania,East Stroudsburg,1.0,0
+362,"August 23, 2017",Colorado,Colorado Springs (Fort Carson),1.0,0
+363,"August 22, 2017",Louisiana,Baton Rouge,1.0,0
+364,"August 21, 2017",New York,Syracuse,1.0,0
+365,"August 20, 2017",Missouri,Saint Joseph,1.0,0
+366,"August 20, 2017",Tennessee,Memphis,1.0,0
+367,"August 19, 2017",Tennessee,Memphis,1.0,0
+368,"August 19, 2017",Tennessee,Clarksville,2.0,0
+369,"August 17, 2017",North Carolina,Winston Salem (Winston-salem),1.0,0
+370,"August 16, 2017",Alaska,Togiak,1.0,0
+371,"August 15, 2017",Washington,Spokane,1.0,0
+372,"August 15, 2017",Arizona,Queen Creek,1.0,0
+373,"August 14, 2017",Kentucky,Covington,1.0,0
+374,"August 14, 2017",Kentucky,Covington,1.0,0
+375,"August 14, 2017",Alabama,Birmingham,1.0,0
+376,"August 13, 2017",Indiana,Monticello,1.0,0
+377,"August 12, 2017",Missouri,Festus,1.0,0
+378,"August 9, 2017",Oklahoma,Tulsa,1.0,0
+379,"August 9, 2017",Pennsylvania,West Mifflin,1.0,0
+380,"August 8, 2017",Wisconsin,Loganville,1.0,0
+381,"August 7, 2017",Texas,Wichita Falls,1.0,0
+382,"August 6, 2017",Missouri,Kansas City,1.0,0
+383,"August 5, 2017",Indiana,Crown Point,1.0,0
+384,"August 4, 2017",Tennessee,Nashville,1.0,0
+385,"August 4, 2017",Texas,San Antonio,1.0,0
+386,"August 4, 2017",Mississippi,Gulfport,1.0,0
+387,"August 2, 2017",New York,Glen Cove,1.0,0
+388,"August 1, 2017",Nevada,Las Vegas,1.0,0
+389,"August 1, 2017",Montana,Helena,1.0,0
+390,"July 31, 2017",Illinois,Springfield,1.0,0
+391,"July 31, 2017",Kentucky,Louisville,1.0,0
+392,"July 31, 2017",South Carolina,Lancaster,1.0,0
+393,"July 30, 2017",Texas,Bacliff,1.0,0
+394,"July 30, 2017",Florida,Sarasota,1.0,0
+395,"July 30, 2017",Florida,Tampa,1.0,0
+396,"July 30, 2017",Maine,Baldwin,1.0,0
+397,"July 29, 2017",South Dakota,Sioux Falls,1.0,0
+398,"July 29, 2017",Florida,Saint Augustine,1.0,0
+399,"July 29, 2017",South Carolina,Columbia,1.0,0
+400,"July 29, 2017",Missouri,Miller,1.0,0
+401,"July 26, 2017",Wisconsin,Waupaca,1.0,0
+402,"July 26, 2017",California,Oakland,1.0,0
+403,"July 24, 2017",Ohio,Newark,1.0,1
+404,"July 24, 2017",Ohio,Cincinnati,1.0,0
+405,"July 23, 2017",Missouri,Saint Louis,1.0,0
+406,"July 23, 2017",Ohio,Miamisburg,1.0,0
+407,"July 22, 2017",Pennsylvania,Pittsburgh,1.0,0
+408,"July 22, 2017",Maryland,Jessup,1.0,0
+409,"July 22, 2017",Tennessee,Memphis,1.0,0
+410,"July 22, 2017",South Carolina,Columbia,1.0,0
+411,"July 21, 2017",Mississippi,Starkville,1.0,0
+412,"July 20, 2017",Texas,Humble (Atascocita),1.0,0
+413,"July 19, 2017",Texas,San Angelo,1.0,0
+414,"July 19, 2017",Georgia,Athens,1.0,0
+415,"July 18, 2017",Arizona,Mesa,1.0,0
+416,"July 17, 2017",Idaho,Troy,1.0,0
+417,"July 14, 2017",Louisiana,New Orleans,1.0,0
+418,"July 14, 2017",Louisiana,Westwego (Bridge City),1.0,0
+419,"July 14, 2017",Illinois,Chicago (Englewood),1.0,0
+420,"July 13, 2017",Illinois,Chicago,1.0,0
+421,"July 13, 2017",Mississippi,Columbus,1.0,0
+422,"July 12, 2017",Wisconsin,Racine,1.0,0
+423,"July 12, 2017",New York,Gowanda,1.0,0
+424,"July 8, 2017",Tennessee,Greeneville,1.0,0
+425,"July 8, 2017",Illinois,Des Plaines,1.0,0
+426,"July 6, 2017",West Virginia,Princeton,1.0,0
+427,"July 6, 2017",Louisiana,Harvey,1.0,0
+428,"July 5, 2017",Florida,Palm Beach (county),1.0,0
+429,"July 5, 2017",Missouri,Columbia,1.0,0
+430,"July 5, 2017",Washington,Federal Way,1.0,0
+431,"July 5, 2017",Florida,Merritt Island,1.0,0
+432,"July 4, 2017",Texas,San Antonio,1.0,0
+433,"July 4, 2017",Mississippi,Louisville,1.0,0
+434,"July 4, 2017",Florida,Wildwood,1.0,0
+435,"July 4, 2017",Georgia,Atlanta,1.0,0
+436,"July 1, 2017",Indiana,Hammond,1.0,0
+437,"July 1, 2017",Mississippi,Jackson,1.0,0
+438,"July 1, 2017",Oregon,Blue River,1.0,0
+439,"July 1, 2017",Georgia,Cordele,1.0,0
+440,"July 1, 2017",Colorado,Sedalia,1.0,0
+441,"June 30, 2017",Georgia,Jenkins (county),1.0,0
+442,"June 29, 2017",Arizona,Phoenix,1.0,0
+443,"June 29, 2017",Mississippi,Pascagoula,1.0,0
+444,"June 26, 2017",Minnesota,Halstad,1.0,0
+445,"June 26, 2017",Indiana,Indianapolis,1.0,0
+446,"June 26, 2017",Alabama,Montgomery,1.0,1
+447,"June 25, 2017",Arkansas,El Dorado,1.0,0
+448,"June 24, 2017",South Carolina,Greenville,1.0,0
+449,"June 24, 2017",Pennsylvania,Red Lion,1.0,0
+450,"June 24, 2017",Missouri,Saint Louis,1.0,0
+451,"June 24, 2017",Tennessee,Nashville,1.0,1
+452,"June 22, 2017",Florida,Bradenton,1.0,0
+453,"June 21, 2017",Tennessee,Memphis,1.0,0
+454,"June 20, 2017",Michigan,Clinton,1.0,0
+455,"June 20, 2017",Arkansas,Danville,1.0,0
+456,"June 19, 2017",Ohio,Barberton,1.0,0
+457,"June 19, 2017",Georgia,Macon,1.0,0
+458,"June 18, 2017",Pennsylvania,Saylorsburg,1.0,0
+459,"June 17, 2017",Oklahoma,Tulsa,1.0,2
+460,"June 16, 2017",Texas,San Antonio,1.0,0
+461,"June 16, 2017",Georgia,Dallas,1.0,0
+462,"June 16, 2017",South Carolina,Spartanburg,1.0,0
+463,"June 14, 2017",Oklahoma,Tulsa,1.0,0
+464,"June 14, 2017",Florida,Palm Bay,1.0,0
+465,"June 12, 2017",Texas,Dayton,1.0,0
+466,"June 11, 2017",Alabama,Montgomery,1.0,0
+467,"June 11, 2017",Georgia,Columbus,1.0,0
+468,"June 11, 2017",Pennsylvania,Washington,1.0,0
+469,"June 10, 2017",Indiana,Hobart,1.0,0
+470,"June 10, 2017",South Dakota,Tripp (county),1.0,0
+471,"June 10, 2017",California,Pacifica,1.0,0
+472,"June 8, 2017",California,Antioch,1.0,0
+473,"June 8, 2017",Louisiana,Farmerville (Rocky Branch),1.0,0
+474,"June 8, 2017",Florida,Cape Coral,1.0,1
+475,"June 8, 2017",Mississippi,Monticello,1.0,0
+476,"June 7, 2017",Arkansas,Conway,1.0,0
+477,"June 7, 2017",Florida,Fort Lauderdale (Lauderhill),1.0,0
+478,"June 6, 2017",Tennessee,Nashville,1.0,0
+479,"June 6, 2017",Virginia,Chesterfield,1.0,0
+480,"June 5, 2017",Illinois,Joliet,1.0,0
+481,"June 4, 2017",Missouri,Saint Louis,1.0,0
+482,"June 4, 2017",South Carolina,Anderson,1.0,0
+483,"June 3, 2017",Louisiana,Opelousas,1.0,0
+484,"June 3, 2017",Pennsylvania,Chester,1.0,0
+485,"June 2, 2017",Colorado,Lafayette,1.0,0
+486,"June 1, 2017",Missouri,Saint Louis,1.0,0
+487,"June 1, 2017",Missouri,Saint Louis,1.0,0
+488,"June 1, 2017",Texas,Houston,1.0,0
+489,"June 1, 2017",Tennessee,Arlington,1.0,0
+490,"May 31, 2017",Kansas,Topeka,1.0,0
+491,"May 30, 2017",Oklahoma,Chickasha,1.0,0
+492,"May 27, 2017",Texas,Jefferson,1.0,1
+493,"May 26, 2017",Arkansas,West Helena,1.0,0
+494,"May 26, 2017",Louisiana,New Orleans,1.0,0
+495,"May 24, 2017",Illinois,Springfield,1.0,0
+496,"May 24, 2017",South Carolina,Sumter,1.0,0
+497,"May 21, 2017",Wisconsin,Ontario,1.0,0
+498,"May 21, 2017",Virginia,Norfolk,1.0,0
+499,"May 21, 2017",Wisconsin,Appleton,1.0,1
