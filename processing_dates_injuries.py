@@ -9,9 +9,11 @@ y = np.zeros(7)
 labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 # for month data
-x_month = range(12)
-y_month = np.zeros(12)
-labels_month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+x_month = range(6)
+y_month = np.zeros(6)
+labels_month = ['Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'] 
+# other months were removed not because there are no incidents then
+# but because they are not entered in the csv file
 
 
 dayOfJuly = np.zeros(31)
@@ -26,18 +28,12 @@ def dayofweek(df):
 		year_sep = date.split(',')
 		date_sep = year_sep[0].split(' ')
 		months = {
-			"December": 12,
-			"November": 11,
-			"October": 10,
-			"September": 9,
 			"August": 8,
 			"July": 7,
 			"June": 6,
 			"May": 5,
 			"April": 4,
-			"March": 3,
-			"February": 2,
-			"January": 1
+			"March": 3
 		}
 
 		month = months[date_sep[0].strip()]
@@ -49,12 +45,12 @@ def dayofweek(df):
 		# 0 - Monday, 6 - Sunday
 		# print(readable_date.weekday())
 		y[readable_date.weekday()] += 1
-		y_month[month-1] += 1
+		y_month[month-3] += 1
 		if month == 7:
 			dayOfJuly[day-1] += 1
 
 def main():
-	df = pd.read_csv("processed_deaths.csv")
+	df = pd.read_csv("processed_injuries.csv")
 
 	dayofweek(df)
 	print("number of incidents each day of week:")
