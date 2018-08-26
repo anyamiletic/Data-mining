@@ -26,6 +26,8 @@
 %%% PACKAGES
 
 \usepackage{setspace}
+\usepackage{listings}
+\usepackage{hyperref}
 
 \usepackage{booktabs} % for much better looking tables
 \usepackage{array} % for better arrays (eg matrices) in maths
@@ -62,41 +64,49 @@
          % otherwise the current date is printed 
 
 \begin{document}
-	\pagenumbering{gobble}
-	\maketitle
-	\newpage
+\pagenumbering{gobble}
+\maketitle
+\newpage
 
-	\doublespacing
-	\tableofcontents
-	\singlespacing
-	\newpage
+\doublespacing
+\tableofcontents
+\singlespacing
+\newpage
 
-	\pagenumbering{arabic}
+\pagenumbering{arabic}
 
-	\section{Uvod}
-	Podaci su skinuti na linku http://www.gunviolencearchive.org/reports. Podaci se nalaze u dve datoteke: deaths.csv i injuries.csv i predstavljaju izvestaje o 
-	slucajnim povredama i smrtnim slucajevima nastalim koriscenjem vatrenog oruzja u Sjedinjenim Americkim Drzavama. 
+\section{Uvod}
+Podaci su skinuti na linku \url{http://www.gunviolencearchive.org/reports}. Podaci se nalaze u dve datoteke: deaths.csv i injuries.csv i predstavljaju izvestaje o 
+slucajnim povredama i smrtnim slucajevima nastalim koriscenjem vatrenog oruzja u Sjedinjenim Americkim Drzavama. 
 
-	\section{Analiza i pretprocesiranje podataka}
-	Obe datoteke sadrze tabele sa istim kolonama. Opisi kolona su dati u tabeli 1.
-	\newline\newline
-	\begin{tabular}{|l|l|}
-	\hline
-	Incident Date & datum incidenta u obliku Mesec dan, godina \\
-	\hline
-	State & savezna americka drzava u kojoj se dogodio incident \\
-	\hline
-	City or County & grad ili okrug u kome se dogodio incident \\
-	\hline
-	Adress & adresa na kojoj se dogodio incident \\
-	\hline
-	\# Killed & broj ubijenih osoba \\
-	\hline
-	\# Injured & broj povredjenih osoba \\
-	\hline
-	\end{tabular}
-	\subsection{Subsection Name}
-	paragraph text
+\section{Analiza i pretprocesiranje podataka}
+Obe datoteke sadrze tabele sa istim kolonama. Opisi kolona su dati u tabeli 1.
+\newline\newline
+\begin{tabular}{|l|l|}
+\hline
+Incident Date & datum incidenta u obliku Mesec dan, godina \\
+\hline
+State & savezna americka drzava u kojoj se dogodio incident \\
+\hline
+City or County & grad ili okrug u kome se dogodio incident \\
+\hline
+Adress & adresa na kojoj se dogodio incident \\
+\hline
+\# Killed & broj ubijenih osoba \\
+\hline
+\# Injured & broj povredjenih osoba \\
+\hline
+\end{tabular}
+
+\subsection{Analiza podataka}
+Kolonu koja predstavlja adrese cemo u nastavku ignorisati. 
+\begin{lstlisting}
+#remove column Adress
+df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
+\end{lstlisting}
+
+	
+	
 
 \end{document}
 
