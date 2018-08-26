@@ -121,9 +121,96 @@ Adress & adresa na kojoj se dogodio incident \\
 \end{tabular}
 
 \subsection{Analiza podataka}
+Pogledajmo detaljnije nase dve datoteke. Koristimo Python kod da izlistamo osnovne informacije o podacima.
+\begin{lstlisting}
+import pandas
+
+print("**************\n*deaths.csv*\n**************\n")
+df_deaths = pandas.read_csv("deaths.csv")
+print(df_deaths.head())
+print(df_deaths.count())
+print(df_deaths.describe())
+for col in df_deaths.columns:
+    print("count values in column " + col)
+    print(df_deaths[col].value_counts(dropna = False))
+\end{lstlisting}
+rezultat izvrsavanja:
+\begin{lstlisting}
+**************
+*deaths.csv*
+**************
+
+     Incident Date   State  City Or County  Address  # Killed  # Injured  Operations
+0  August 17, 2018   Louisiana  West Monroe  Philpot Rd   1        0      NaN
+1  August 16, 2018   Virginia  Richmond  5600 .. Ct          1      0     NaN
+2  August 15, 2018   Kentucky   Louisville    1708 .. St      1      0     NaN
+3  August 15, 2018   Ohio       Columbus 1200 .. Rd        1      0     NaN
+4  August 14, 2018   Michigan Pontiac   40 .. Salee Ln      1      0    NaN
+
+Incident Date     500
+State             500
+City Or County    500
+Address           468
+# Killed          500
+# Injured         500
+Operations          0
+
+        # Killed   # Injured  Operations
+count  500.00000  500.000000         0.0
+mean     1.00600    0.038000         NaN
+std      0.09992    0.211294         NaN
+min      0.00000    0.000000         NaN
+25\%      1.00000    0.000000         NaN
+50\%      1.00000    0.000000         NaN
+75\%      1.00000    0.000000         NaN
+max      2.00000    2.000000         NaN
+
+count values in column Incident Date
+March 4, 2018         6
+July 1, 2017          5
+March 12, 2018        5
+October 29, 2017      5
+November 2, 2017      4
+September 30, 2017    4
+June 24, 2017         4
+May 22, 2018          4
+January 1, 2018       4
+March 31, 2018        4
+February 20, 2018     4
+July 4, 2017          4
+October 7, 2017       4
+June 1, 2017          4
+June 8, 2017          4
+..
+count values in column State
+Texas             48
+Tennessee         30
+Florida           26
+Georgia           24
+Missouri          23
+Ohio              22
+Alabama           22
+Louisiana         21
+Mississippi       21
+South Carolina    19
+Pennsylvania      17
+..
+count values in column # Killed
+1    495
+2      4
+0      1
+count values in column # Injured
+0    483
+1     15
+2      2
+count values in column Operations
+NaN    500
+\end{lstlisting}
+Iz ovih rezultata mozemo primetiti vise stvari. Tabela ima tacno 500 unosa, pri cemu kolone Incident Date, State, City or County, \#Killed i \#Injured nemaju nijednu null vrednost. 
+Kolona Operations nema nijednu vazecu vrednost i ona ce biti izbacena iz daljeg razmatranja. Najvise unosa je bilo 4. marta 2018, a najvise incidenata se dogodilo u Teksasu, cak 48.
 Kolonu koja predstavlja adrese cemo u nastavku ignorisati. 
 \begin{lstlisting}
-#remove column Adress
+#remove column Adress and Operations
 df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
 \end{lstlisting}
 
