@@ -34,7 +34,7 @@
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
-\lstset{frame=tb,
+\lstset{frame=L,
   language=Python,
   aboveskip=3mm,
   belowskip=3mm,
@@ -212,6 +212,25 @@ Kolonu koja predstavlja adrese cemo u nastavku ignorisati.
 \begin{lstlisting}
 #remove column Adress and Operations
 df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
+\end{lstlisting}
+Primetimo da u datoteci deaths.csv postoje unosi gde je bilo 0 smrtnih slucajeva. Analogno, u datoteci injuries.csv postoje unosi u kojima nije bilo povredjenih. Ove redove tabele zelimo da izbacimo.
+Ovo postizemo uz pomoc sledece dve funckije:
+\begin{lstlisting}
+import pandas
+
+def no_deaths():
+    print('put Null values on zero death rows')
+    df_deaths = pandas.read_csv('./deaths.csv')
+    for i, row in df_deaths.iterrows():
+        number_deaths = row['# Killed']
+        if(number_deaths == 0):
+            df_deaths.set_value(i, '# Killed', None)
+
+    return df_deaths
+
+def remove_missing_values(df):
+    df_deaths_tmp = df[pandas.notnull(df['# Killed'])]
+    return df_deaths_tmp
 \end{lstlisting}
 
 	
