@@ -25,7 +25,7 @@ def main():
     df = no_deaths()
     df = remove_missing_values(df)
 
-    #remove column Operations
+    #remove column Adress
     df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
 
     print(df.describe())
