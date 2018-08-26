@@ -28,6 +28,28 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{hyperref}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
 
 \usepackage{booktabs} % for much better looking tables
 \usepackage{array} % for better arrays (eg matrices) in maths
@@ -107,6 +129,88 @@ df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
 
 	
 	
+	\newpage
+	\section{Klasterovanje}
+	Proces klasterovanja izvrsen je na podacima koji su pre samog izvrsavanja pripremljeni (pretprocesiranje i namestanje podataka). 
+	Podaci koji su prosledjeni imaju dva atributa, to su 'State' i 'Number of Incidents', 'State' predstavlja drzavu, a 'Number of Incidents' predstavlja 
+	ukupan broj incidenata (slucajnih povreda i slucajnih ubistava) u toj drzavi.
+	
+	\subsection{Pripremanje podataka za klasterovanje}
+	Da bismo izvrsili klasterovanje koje ima smisla, gde moze da se vidi koji podaci su slicniji, a koji razlicitiji, moramo da prvo te podatke izmenimo na 
+	neki nacin i namestimo ih da budu takvi da nam odgovaraju. U narednom kodu napisanom u Python-u smo izmenili podatke iz 
+	processed\_deaths.csv i processed\_injuries.csv i napravili novi fajl summedIncidentsPerState.csv.
+	\newline
+	
+	\begin{lstlisting}
+import pandas
+
+def changeDateFormat(df):
+	for i, row in df.iterrows():
+		month = row["Incident Date"].strip().split(' ')[0].split(',')[0]
+		df.set_value(i, "Incident Date", month)
+	
+	df = df.drop(columns = ["Unnamed: 0", "Incident Date", "City Or County"])
+	
+	allIncidents = {}
+	allStates = []
+	for i, row in df.iterrows():
+		state = row["State"].strip()
+		if state not in allStates:
+			allStates.append(state)
+			allIncidents[state] = int(row["# Injured"]) + int(row["# Killed"])
+		else:
+			allIncidents[state] += int(row["# Injured"]) + int(row["# Killed"])
+		df = df.drop([i])
+	
+	df = df.drop(columns = ["# Killed", "# Injured"])
+	for k, v in allIncidents.iteritems():
+		state = k
+		numberOfDeaths = v
+		df = df.append({"State" : state, "# Incidents" : int(numberOfDeaths)}, ignore_index = True)
+	
+	return df
+	
+    \end{lstlisting}
+	
+	\subsection{Prosledjivanje generisanih podataka i klasterovanje}
+	Sad kad smo generisali podatke koristimo ih u Knime-u.
+	Prvo citamo podatke sa CSV Reader-om, zatim ih saljemo na normalizaciju, tj. da se vrednosti iz kolone sa brojem ubistava skaliraju na interval [0, 1].
+	Posle toga racunamo Euklidska rastojanja podataka, pa ta rastojanja i izlaz iz cvora koji je normalizovao podatke saljemo DBSCAN cvoru koji 
+	dodaje jos jednu kolonu i svakoj instanci dodeljuje neku vrednost u zavisnosti od toga gde se nalazi.
+	Ostalo je samo jos da se iscrtaju podaci, da bismo to uradili koristimo Color Manager i Scatter Plot.
+	\newline
+	
+	\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.8\textwidth]{klasterovanjeKnime}
+		\caption{Izgled klasterovanja podataka u Knime-u}
+	\end{figure}
+	
+	
+	\newpage
+	\subsection{Izgled klasterovanih podataka i analiza}
+	Sada imamo podatke koji su podeljeni, svaki pripada nekom klasteru (neki pripadaju klasteru Noise) i svakom klasteru je dodeljena druga boja. Moze se 
+	primetiti da je drzava u kojima ima vise ubistava mnogo manje nego drzava u kojima ima imanje. Npr. u Teksasu ima toliko vise nego bilo gde drugde da se 
+	Teksas dozivljava kao sum.
+	
+	\begin{figure}[h!]
+	\centering
+		\includegraphics[width=0.8\textwidth]{klasterovanje1}
+		\caption{Klasterovani podaci koji prikazuju zavisnost drzave i broja ubistava u toj drzavi}
+	\end{figure}
+
+
+	\newpage
+	\section{Klasifikacija}
+	Proces klasifikacije ili nadgledanog ucenja slicno kao i klasterovanje izvrsavamo na podacima koje smo generisali u drugom programu, zatim smo u 
+	Knime-u te podatke iskoristili i izvrsili klasifikaciju. 
+	Uradjene su dve klasifikacije. 
+	Jedna je predvidjanje da li ce u odredjenom danu u nedelji u odredjenom mesecu biti malo, srednje ili puno incidenata. 
+	Malo incidenata znaci da se u tom mesecu, u tom danu u nedelji (npr. svakom ponedeljku) ukupno desilo manje od 8, srednje znaci da je taj broj izmedju 8 i 15, 
+	a puno vise od 15. Sa ovim brojevima ima slican broj parova (dan u nedelji, mesec) (blizu 33\% svako). To nije slucajnost, s obzirom na to da je 
+	uzoracka sredina broja ubistava 12.8.
+	U drugoj klasifikaciji izvrsava se predvidjanje da li ce biti puno (vise od 1) ili malo (manje jednako 1) incidenata u nekoj drzavi u nekom gradu
+	\subsection{Klasifikacija: Dan u nedelji, mesec, broj incidenata}	
 
 \end{document}
 
