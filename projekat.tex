@@ -142,8 +142,6 @@ df = df[['Incident Date','State','City Or County','# Killed','# Injured']]
 	\newline
 	
 	\begin{lstlisting}
-import pandas
-
 def changeDateFormat(df):
 	for i, row in df.iterrows():
 		month = row["Incident Date"].strip().split(' ')[0].split(',')[0]
@@ -198,8 +196,7 @@ def changeDateFormat(df):
 		\includegraphics[width=0.8\textwidth]{klasterovanje1}
 		\caption{Klasterovani podaci koji prikazuju zavisnost drzave i broja ubistava u toj drzavi}
 	\end{figure}
-
-
+	
 	\newpage
 	\section{Klasifikacija}
 	Proces klasifikacije ili nadgledanog ucenja slicno kao i klasterovanje izvrsavamo na podacima koje smo generisali u drugom programu, zatim smo u 
@@ -209,9 +206,37 @@ def changeDateFormat(df):
 	Malo incidenata znaci da se u tom mesecu, u tom danu u nedelji (npr. svakom ponedeljku) ukupno desilo manje od 8, srednje znaci da je taj broj izmedju 8 i 15, 
 	a puno vise od 15. Sa ovim brojevima ima slican broj parova (dan u nedelji, mesec) (blizu 33\% svako). To nije slucajnost, s obzirom na to da je 
 	uzoracka sredina broja ubistava 12.8.
-	U drugoj klasifikaciji izvrsava se predvidjanje da li ce biti puno (vise od 1) ili malo (manje jednako 1) incidenata u nekoj drzavi u nekom gradu
-	\subsection{Klasifikacija: Dan u nedelji, mesec, broj incidenata}	
+	U drugoj klasifikaciji izvrsava se predvidjanje da li ce biti puno (vise od 1) ili malo (manje jednako 1) incidenata u nekoj drzavi u nekom gradu.
+	
+	\subsection{Klasifikacija: Dan u nedelji, mesec, broj incidenata}
+	Kao i ranije prvo podatke zelimo da transformisemo i dobijemo zeljeni oblik. U ovom slucaju zeljeni oblik bi bio da imamo kolonu mesec, dan u nedelji i 
+	ukupan broj incidenata u toj kombinaciji (meseca i dana u nedelji). Sledeci kod ce generisati novi fajl u kome ce se nalaziti podaci.
 
+	\begin{lstlisting}
+def changeDateFormat(df):
+	df = df.drop(columns = ["Unnamed: 0", "Incident Date"])
+	
+	incidents = {}
+	for i, row in df.iterrows():
+		state = row["State"].strip()
+		city = row["City Or County"].strip()
+		if state + ":" + city not in incidents:
+			incidents[state + ":" + city] = int(row["# Injured"]) + int(row["# Killed"])
+		else:
+			incidents[state + ":" + city] += int(row["# Injured"]) + int(row["# Killed"])
+		df = df.drop([i])
+	
+	df = df.drop(columns = ["# Killed", "# Injured"])
+	for k, v in incidents.iteritems():
+		key = k.split(':')
+		city = key[1]
+		state = key[0]
+		numberOfDeaths = v
+		df = df.append({"State" : state, "City Or County" : city, "# Incidents" : int(numberOfDeaths)}, ignore_index = True)
+	
+	return df
+	\end{lstlisting}
+	
 \end{document}
 
 
