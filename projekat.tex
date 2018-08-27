@@ -81,7 +81,13 @@
 %%% The "real" document content comes below...
 
 \title{Accidental Deaths and Injuries Data Analasys}
-\author{Anja Miletić, Mateja Marjanović}
+\author{
+Anja Miletić\\
+\texttt{97/2015}
+\and
+Mateja Marjanović\\
+\texttt{172/2015}
+}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
@@ -232,6 +238,86 @@ def remove_missing_values(df):
     df_deaths_tmp = df[pandas.notnull(df['# Killed'])]
     return df_deaths_tmp
 \end{lstlisting}
+\subsection{Distribucija frekvencija podataka}
+U ovom delu cemo se fokusirati na prvu kolonu tabele, Incident Date. Zelimo da analiziramo frekvenciju incidenata u odnosu na dan u nedelji, mesec i slicno.
+Da bi mogli da koristimo unose iz ove kolone moramo da transformisemo datum iz jedne niske u brojcane vrednosti za dan, mesec i godinu koje onda mozemo
+da cuvamo u nizovima. Sledeca funkcija konvertuje datum u datetime format:
+\begin{lstlisting}
+import pandas
+from datetime import datetime as dt
+
+def dayofweek(df):
+	for i, row in df.iterrows():
+		date = row["Incident Date"]
+		year_sep = date.split(',')
+		date_sep = year_sep[0].split(' ')
+
+		month = months[date_sep[0].strip()]
+		day = int(date_sep[1].strip())
+		year = int(year_sep[1].strip())
+
+		readable_date = dt.date(year, month, day)
+
+		# 0 - Monday, 6 - Sunday
+		y[readable_date.weekday()] += 1
+		y_month[month-1] += 1
+		if month == 7:
+			dayOfJuly[day-1] += 1
+\end{lstlisting}
+Funckija dayofweek istovremeno kategorise unose prema danu u nedelji i mesecu. Niz dayOfJuly sadrzi sve incidente koji su se dogodili u julu kategorisani po danu.
+Koristimo Python biblioteku matplotlib da graficki prikazemo dobijene rezultate.
+\begin{lstlisting}
+df = pd.read_csv("processed_deaths.csv")
+
+	dayofweek(df)
+	print("number of incidents each day of week:")
+	print(y)
+	plt.bar(x, y, width=0.5, color="blue", tick_label=labels)
+	plt.show()
+
+	print("number of incidents per month:")
+	print(y_month)
+	plt.bar(x_month, y_month, width=0.5, color="red", tick_label=labels_month)
+	plt.show()
+	
+	print("number of incidents per day in july:")
+	print(dayOfJuly)
+	plt.bar(range(31), dayOfJuly, width=0.5, color="green", tick_label=labels_july)
+	plt.show()
+\end{lstlisting}
+Izlaz u konzoli:
+\begin{lstlisting}
+number of incidents each day of week:
+[ 61.  61.  68.  64.  62. 102.  81.]
+number of incidents per month:
+[29. 24. 33. 17. 49. 77. 81. 49. 32. 45. 31. 32.]
+number of incidents per day in july:
+[5. 2. 1. 6. 7. 2. 3. 4. 1. 1. 0. 3. 3. 4. 2. 
+0. 1. 1. 2. 3. 1. 4. 2. 4. 0. 3. 3. 2. 4. 4. 3.]
+\end{lstlisting}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{incidents_per_dayofweek}
+	\caption{Distribucija po danu u nedelji}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{incidents_permonth}
+	\caption{Distribucija po mesecima}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{incidents_july}
+	\caption{Distribucija tokom jula}
+\end{figure}
+Dolazimo do nekoliko zakljucaka; najpre primecujemo ubedljivo najvecu frekvenciju podataka subotom, zatim nedeljom. 
+Ovo zapazanje ima smisla jer ljudi vikendom uglavnom ne rade pa stoji da ce se najvise nesreca dogoditi upravo tad.
+Zatim, figura 2 pokazuje jun i jul kao mesece u kojima je zabelezeno najvise incidenata, znatno vise nego ostalih 
+meseci. Izdvojili smo jul kao mesec od posebnog interesovanja (figura 3). Najvise unosa postoji 4. i 5. jula, iako 
+su ovo bili radni dani. Zasto? Upravo tih dana je drzavni praznik u SAD, proslava dana nezavisnosti. Tradicionalno
+postoji mnogo veca upotreba oruzja u svrhu proslave ovih dana, a samim tim i veci broj zabelezenih povreda i slucajnih 
+smrtnih ishoda. Vredi napomenuti da je 2. novembra, na Dan mrtvih koji obelezavaju pripadnici latino populacije takodje
+zabelezen veci broj nesreca od ocekivanog.
 
 	
 	
@@ -342,6 +428,23 @@ def changeDateFormat(df):
 	
 	return df
 	\end{lstlisting}
+	
+	\subsubsection{Klasifikacija u Knime-u}
+	
+	\begin{figure}[h!]
+        \includegraphics[width=0.8\textwidth]{klasifikacijaDanMesecKnime}
+        \caption{Izlged klasifikacije u Knime-u}
+	\end{figure}
+	
+	\begin{figure}[h!]
+        \includegraphics[width=0.8\textwidth]{klasifikacijaDanMesec}
+        \caption{Drvo odlucivanja u kome se na osnovu dana u nedelji i meseca predvidja da li ce biti malo, srednje ili puno incidenata}
+	\end{figure}
+	
+	\begin{figure}[h!]
+        \includegraphics[width=0.8\textwidth]{matricaKonfuzije}
+        \caption{Matrica konfuzije}
+	\end{figure}
 	
 \end{document}
 
