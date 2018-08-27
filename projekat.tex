@@ -466,29 +466,46 @@ def changeDateFormat(df):
 	Kao i ranije prvo podatke zelimo da transformisemo i dobijemo zeljeni oblik. U ovom slucaju zeljeni oblik bi bio da imamo kolonu mesec, dan u nedelji i 
 	ukupan broj incidenata u toj kombinaciji (meseca i dana u nedelji). Sledeci kod ce generisati novi fajl u kome ce se nalaziti podaci.
 
+	\subsubsection{Generisanje novih podataka}
 	\begin{lstlisting}
-def changeDateFormat(df):
-	df = df.drop(columns = ["Unnamed: 0", "Incident Date"])
-	
-	incidents = {}
+	def addDayOfTheWeek(df):
+	months = {
+		"December": 12,
+		....
+		"February": 2,
+		"January": 1
+	}
+	dayMonthMap = {}
 	for i, row in df.iterrows():
-		state = row["State"].strip()
-		city = row["City Or County"].strip()
-		if state + ":" + city not in incidents:
-			incidents[state + ":" + city] = int(row["# Injured"]) + int(row["# Killed"])
+		date = row["Incident Date"]
+		year_sep = date.split(',')
+		date_sep = year_sep[0].split(' ')
+
+		month = months[date_sep[0].strip()]
+		day = int(date_sep[1].strip())
+		year = int(year_sep[1].strip())
+
+		readable_date = dt.date(year, month, day)
+		
+		dayOfTheWeek = readable_date.weekday()
+		dayOfTheWeek = list(["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"])[dayOfTheWeek]
+		month = date_sep[0]
+		
+		if dayOfTheWeek + ":" + month not in dayMonthMap:
+			dayMonthMap[dayOfTheWeek + ":" + month] = row["# Incidents"]
 		else:
-			incidents[state + ":" + city] += int(row["# Injured"]) + int(row["# Killed"])
-		df = df.drop([i])
-	
-	df = df.drop(columns = ["# Killed", "# Injured"])
-	for k, v in incidents.iteritems():
-		key = k.split(':')
-		city = key[1]
-		state = key[0]
-		numberOfDeaths = v
-		df = df.append({"State" : state, "City Or County" : city, "# Incidents" : int(numberOfDeaths)}, ignore_index = True)
-	
-	return df
+			dayMonthMap[dayOfTheWeek + ":" + month] += row["# Incidents"]
+
+
+	df2 = pandas.DataFrame(data = {"Month" : [], "Day Of The Week" : [], "# Incidents" : []})
+
+	for k, v in dayMonthMap.iteritems():
+		day = k.split(':')
+		month = day[1]
+		day = day[0]
+		df2 = df2.append({"Month" : month, "Day Of The Week" : day, "# Incidents" : v}, ignore_index = True)
+
+	return df2
 	\end{lstlisting}
 	
 	\subsubsection{Klasifikacija u Knime-u}
