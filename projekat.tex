@@ -501,6 +501,58 @@ def changeDateFormat(df):
         \caption{Matrica konfuzije}
 	\end{figure}
 	
+	\subsection{Klasifikacija: Drzava, grad ili mesto, broj incidenata}
+	Slicno kao i u prethodnoj klasifikaciji uzimamo procesuirane podatke, generisemo nove na osnovu njih, zatim saljemo u Knime da izvrsi klasifikaciju. 
+	Glavna razlika je u tome sto se ovde radi sa drzavama, gradovima i brojem incidenata. Cilj nam je da predvidimo da li ce biti 
+	puno (vise od jednog incidenta) ili malo (samo jedan incident).
+	
+	\subsubsection{Generisanje novih podataka}
+	\begin{lstlisting}
+	def sumIncidentsPerCityAndState(df):
+	df = df.drop(columns = ["Unnamed: 0", "Incident Date"])
+
+	incidents = {}
+	for i, row in df.iterrows():
+		state = row["State"].strip()
+		city = row["City Or County"].strip()
+		if state + ":" + city not in incidents:
+			incidents[state + ":" + city] = int(row["# Injured"]) + int(row["# Killed"])
+		else:
+			incidents[state + ":" + city] += int(row["# Injured"]) + int(row["# Killed"])
+		df = df.drop([i])
+
+	df = df.drop(columns = ["# Killed", "# Injured"])
+	for k, v in incidents.iteritems():
+		key = k.split(':')
+		city = key[1]
+		state = key[0]
+		numberOfDeaths = v
+		df = df.append({"State" : state, "City Or County" : city, "# Incidents" : int(numberOfDeaths)}, ignore_index = True)
+
+	return df
+	\end{lstlisting}
+	
+	\subsubsection{Klasifikacija u Knime-u}
+	Prvo se u CSV Reader-u citaju podaci koji su generisani, to se prosledjuje u Rule Engine gde se vrednosti kolone \# Incidents menjaju i dobijaju vrednosti Low 
+	i High u zavisnosti od toga koja im je vrednost. Onda se ide u Partitioning gde se podaci na slucajan nacin dele na trening i 
+	test podatke (33\% su trening podaci). Test podaci se salju u Decisiion Tree Predictor, a trening u Decisiion Tree Learner ciji se izlaz prosledjuje u 
+	Predictor. Predictor salje svoj izlaz u Scorer odakle mozemo videti matricu konfuzije, gresku, preciznost... a u Predictor-u mozemo videti drvo odlucivanja.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.7\textwidth]{klasifikacijaGradDrzavaKnime}
+		\caption{Izlged klasifikacije u Knime-u}
+	\end{figure}
+	
+	Greska je oko 30\%, preciznost oko 70\%.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{klasifikacijaGradMatricaKonfuzije}
+		\caption{Matrica konfuzije}
+	\end{figure}
+	
+	
+	
+	
 \end{document}
 
 
