@@ -318,6 +318,61 @@ su ovo bili radni dani. Zasto? Upravo tih dana je drzavni praznik u SAD, proslav
 postoji mnogo veca upotreba oruzja u svrhu proslave ovih dana, a samim tim i veci broj zabelezenih povreda i slucajnih 
 smrtnih ishoda. Vredi napomenuti da je 2. novembra, na Dan mrtvih koji obelezavaju pripadnici latino populacije takodje
 zabelezen veci broj nesreca od ocekivanog.
+\subsection{Legislacije o vatrenom oruzju u SAD}
+Savezne drzave mogu da definisu svoje zakone koji regulisu upotrebu oruzja. Postoji velika raznolikost u broju ovih zakona (legislacija)
+medju drzavama. Zanimalo nas je da li postoji veza izmedju broja zakona i broja incidenata, tj. da li veci broj zakona znaci veci broj slucaja 
+i obratno. U te svrhe smo napravili novu .csv datoteku:
+\begin{lstlisting}[caption={gun\_laws\_per\_state.csv}]
+"State","# Laws"
+"Alabama",10
+"Alaska",3
+"Arizona",8
+"Arkansas",11
+"California",107
+"Colorado",30
+"Connecticut",90
+"Delaware",40
+"Florida",21
+...
+\end{lstlisting}
+Podaci su dobijeni sa sajta Americke vlade \url{https://www.statefirearmlaws.org/national-data}. Sada mozemo da sumiramo
+podatke i generisemo grafikon(figura 4):
+\begin{lstlisting}[caption={processing\_gun\_laws.py}]
+import pandas as pd
+import matplotlib.pyplot as plt
+import datetime as dt
+import numpy as np
+
+# number of gun laws
+x = np.zeros(50)
+# number of deaths
+y = np.zeros(50)
+
+def main():
+	df_laws = pd.read_csv("gun_laws_per_state.csv")
+	df_deaths = pd.read_csv("processed_deaths.csv")
+
+	for i, row in df_laws.iterrows():
+		subsamples = df_deaths.loc[df_deaths['State'] == row['State']]
+		total_deaths = np.sum(subsamples['# Killed'])
+
+		x[i] = df_laws.get_value(i, '# Laws')
+		y[i] = total_deaths
+
+	plt.scatter(x, y, color="blue")
+	plt.show()
+
+if __name__ == "__main__":
+	main()
+\end{lstlisting}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{gun_laws_chart}
+	\caption{odnos zakona i zabelezenih slucajeva}
+\end{figure}
+Posmatrajuci grafikon primecujemo grupisanje podataka u donjem levom kvadrantu. Dakle, mali broj zakona i mali broj slucajeva.
+Medjutim, autori smatraju da se na osnovu ovih podataka ne mogu doneti cvrsti zaključci o vezi izmedju broja legislacija i broja 
+nesrecnih slucajeva.
 
 	
 	
