@@ -28,6 +28,13 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
 \usepackage{color}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -147,11 +154,11 @@ rezultat izvrsavanja:
 **************
 
      Incident Date   State  City Or County  Address  # Killed  # Injured  Operations
-0  August 17, 2018   Louisiana  West Monroe  Philpot Rd   1        0      NaN
-1  August 16, 2018   Virginia  Richmond  5600 .. Ct          1      0     NaN
-2  August 15, 2018   Kentucky   Louisville    1708 .. St      1      0     NaN
-3  August 15, 2018   Ohio       Columbus 1200 .. Rd        1      0     NaN
-4  August 14, 2018   Michigan Pontiac   40 .. Salee Ln      1      0    NaN
+0  August 17, 2018   Louisiana  West Monroe  Philpot Rd    1       0      NaN
+1  August 16, 2018   Virginia  Richmond  5600 .. Ct        1       0      NaN
+2  August 15, 2018   Kentucky   Louisville    1708 .. St   1       0      NaN
+3  August 15, 2018   Ohio       Columbus 1200 .. Rd        1       0      NaN
+4  August 14, 2018   Michigan Pontiac   40 .. Salee Ln     1       0      NaN	
 
 Incident Date     500
 State             500
@@ -241,7 +248,7 @@ def remove_missing_values(df):
 \subsection{Distribucija frekvencija podataka}
 U ovom delu cemo se fokusirati na prvu kolonu tabele, Incident Date. Zelimo da analiziramo frekvenciju incidenata u odnosu na dan u nedelji, mesec i slicno.
 Da bi mogli da koristimo unose iz ove kolone moramo da transformisemo datum iz jedne niske u brojcane vrednosti za dan, mesec i godinu koje onda mozemo
-da cuvamo u nizovima. Sledeca funkcija konvertuje datum u datetime format:
+da cuvamo u nizovima. Sledeca funkcija konvertuje datum u datetime format:\newline
 \begin{lstlisting}
 import pandas
 from datetime import datetime as dt
@@ -321,7 +328,7 @@ zabelezen veci broj nesreca od ocekivanog.
 \subsection{Legislacije o vatrenom oruzju u SAD}
 Savezne drzave mogu da definisu svoje zakone koji regulisu upotrebu oruzja. Postoji velika raznolikost u broju ovih zakona (legislacija)
 medju drzavama. Zanimalo nas je da li postoji veza izmedju broja zakona i broja incidenata, tj. da li veci broj zakona znaci veci broj slucaja 
-i obratno. U te svrhe smo napravili novu .csv datoteku:
+i obratno. U te svrhe smo napravili novu .csv datoteku:\newline\newline\newline\newline\newline
 \begin{lstlisting}[caption={gun\_laws\_per\_state.csv}]
 "State","# Laws"
 "Alabama",10
@@ -435,7 +442,7 @@ def changeDateFormat(df):
 	\newpage
 	\subsection{Izgled klasterovanih podataka i analiza}
 	Sada imamo podatke koji su podeljeni, svaki pripada nekom klasteru (neki pripadaju klasteru Noise) i svakom klasteru je dodeljena druga boja. Moze se 
-	primetiti da je drzava u kojima ima vise ubistava mnogo manje nego drzava u kojima ima imanje. Npr. u Teksasu ima toliko vise nego bilo gde drugde da se 
+	primetiti da ima mnogo manje drzava u kojima ima vise ubistava u odnosu na broj drzava u kojima ima malo ubistava. Na primer u Teksasu ima toliko vise nego bilo gde drugde da se 
 	Teksas dozivljava kao sum.
 	
 	\begin{figure}[h!]
@@ -453,7 +460,7 @@ def changeDateFormat(df):
 	Malo incidenata znaci da se u tom mesecu, u tom danu u nedelji (npr. svakom ponedeljku) ukupno desilo manje od 8, srednje znaci da je taj broj izmedju 8 i 15, 
 	a puno vise od 15. Sa ovim brojevima ima slican broj parova (dan u nedelji, mesec) (blizu 33\% svako). To nije slucajnost, s obzirom na to da je 
 	uzoracka sredina broja ubistava 12.8.
-	U drugoj klasifikaciji izvrsava se predvidjanje da li ce biti puno (vise od 1) ili malo (manje jednako 1) incidenata u nekoj drzavi u nekom gradu.
+	U drugoj klasifikaciji izvrsava se predvidjanje da li ce biti puno (vise od 1) ili malo (manje ili jednako 1) incidenata u nekoj drzavi u nekom gradu.
 	
 	\subsection{Klasifikacija: Dan u nedelji, mesec, broj incidenata}
 	Kao i ranije prvo podatke zelimo da transformisemo i dobijemo zeljeni oblik. U ovom slucaju zeljeni oblik bi bio da imamo kolonu mesec, dan u nedelji i 
